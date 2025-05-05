@@ -1,7 +1,5 @@
 # imc-prosperity-3
 
-# IMC Prosperity 3
-
 ## Leaderboard Ranking
 
 | Round                    | Overall Rank | Manual Rank | Algorithmic Rank | Country (USA) Rank | Profit Manual | Profit Algorithmic | Profit Total |
