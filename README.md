@@ -54,8 +54,7 @@ You get the chance to do a series of trades in some foreign island currencies. T
 
 Round 1 Manual Approach: Trading table trying to optimize for PNL return based on product conversions. Utilized a ipynb from Gabsens repository from previous year competition to check my solution. There was only "one" solution for this problem and it could be brute forced developing a solution by code was also fairly simple. 
 
-![image](https://github.com/user-attachments/assets/23baefca-a68d-4a6f-87a3-0cd3d7434e8f)
-
+![round1_manual](https://github.com/user-attachments/assets/672f0086-dd88-4a39-8013-b0f235eaff99)
 
 Round 1 Trading:
 Prompt:
@@ -75,12 +74,12 @@ A metric to keep track of the size of deviation/swing from recent average could 
 
 Round 1 Trading Approach: Three Products KELP, RAINFOREST_RESIN, and SQUID_INK. Was able to create a good strategy for KELP and RAINFOREST_RESIN utilizing market making strategy as the historical price behavior of these products were relatively stable. SQUID_INK was more difficult to implement because of its swings and volatile price history, the strategy to utilize here was mean reversion but my implementation was nowhere near optimized when comparing to other teams.
 
-![image](https://github.com/user-attachments/assets/28abd5f6-faba-4731-aa31-48c68cd0558f)
+![round1_algo ](https://github.com/user-attachments/assets/bb061651-9fa4-4eb1-8fe5-7f93e37b515c)
 
 
 Round 1 Overall:
 
-![image](https://github.com/user-attachments/assets/617de4d7-0fa5-4455-a830-496b8ef759f9)
+![round1_overall](https://github.com/user-attachments/assets/4b74bb1e-846c-4201-abac-afa988bd811e)
 
 Round 2 Manual: 
 Prompt:
@@ -94,8 +93,7 @@ For example, if **5 inhabitants** choose a container, and **this container was c
 Round 2 Manual approach: 
 Choose a spot with a multiplier, multiplier is reduced by percentage of other teams that go there Profit formula looks like this 10,000*((Multiplier)/(Inhabitants (fixed value) + Percentage of teams that choose the same spot (Unknown value)). There were teams that created bots to create Prosperity teams and artifically inflate the percentage of teams that went to specific locations, although some locations were not influenced by this. Ultimately, the locations with low multipliers performed the best in this round (although they were high risk as slight percentage of team increase would have greatly reduced the profit for those chosen locations). I picked I relatively bad choice because of the number of teams that chose the same spot.
 
-![image](https://github.com/user-attachments/assets/02675a2c-4541-49da-8bc8-0a3f503dd32f)
-
+![round2_manual](https://github.com/user-attachments/assets/d9354913-385c-4b57-8434-bce7c5aa8ff3)
 
 Round 2 Trading:
 
@@ -126,12 +124,11 @@ Position limits for the newly introduced products:
 Round 2 Trading approach: 
 5 New products JAMS, DJEMBES, CROISSANTS, PICNIC_BASKET1, PICNIC_BASKET2. PICNIC_BASKET1 is composed of 6 CROISSANTS, 3 JAMS, and 1 DJEMBES, while PICNIC_BASKET2 is composed of 4 CROISSANTS and 2 JAMS so basically the picnic baskets are spread products/ETFs. All these products were relatively voltile but the components price behavior often mirrored the behavior of the baskets. I was not able to implement a profitable strategy for the final submission of this round. I think the trick here is managing the shared components between PICNIC_BASKET1 and PICNIC_BASKET2 then performing an arbitrage strategy and this is what I was trying to implement. However, if I was able to tackle this same products again what I would do is just trade PICNIC_BASKET2 on its own and develop the arbitrage strategy just for PB1. I don't know if this is the best strategy I should have done some more research on ETF type algorithms. 
 
-![image](https://github.com/user-attachments/assets/3040d08b-892e-43cd-a0df-ec50cde8d45e)
+![round2_algo](https://github.com/user-attachments/assets/21409494-68e7-43fc-8db5-2c014a6eec04)
 
 Round 2 Overall:
 
-![image](https://github.com/user-attachments/assets/f56d849e-f4af-4794-b7f0-19aa1942e7bc)
-
+![round2_overall](https://github.com/user-attachments/assets/944113b0-f9a5-41d1-829f-82390b3727eb)
 
 Round 3 Manual:
 
@@ -152,7 +149,7 @@ Think hard about how you want to set your two bids, place your feet firmly in th
 Round 3 Manual Approach:
 Bidding Flippers to buy from Sea Turtles then reselling. None of the Sea Turtles trade between a certain range. I wrote some code to create simulations for this, but I ended up using gut feeling because the simulations did not allign with my predictions this was my final choice: 
 
-![image](https://github.com/user-attachments/assets/ed673280-f2b7-433f-b07c-e9a5df5e522e)
+![round3_manual](https://github.com/user-attachments/assets/d8cce61e-0f3a-4e54-af79-b005833fd6a2)
 
 
 Round 3 Trading:
@@ -222,14 +219,15 @@ This fitted v_t(m_t) allows me to evaluate opportunities between different strik
 
 Message ends.
 
-![image](https://github.com/user-attachments/assets/d6e593b4-22ec-4f78-a176-9e81b6c39fb7)
 
 Round 3 Trading Approach: 6 new products VOLCANIC_ROCK, VOLCANIC_ROCK_VOUCHER_9500, VOLCANIC_ROCK_VOUCHER_9750, VOLCANIC_ROCK_VOUCHER_10000, VOLCANIC_ROCK_VOUCHER_10250, VOLCANIC_ROCK_VOUCHER_10500 basically for these products in this round we needed to create options trading strategy. I created black scholes algorithm based off the recommended hint + previous competition approahces with a delta hedging strategy, the strategy ended up being successful and was returning stable profit (non-volatile).
 
+![round3_algo](https://github.com/user-attachments/assets/b01aa482-6159-4c8f-93fb-34a6c3409a73)
+
+
 Round 3 Overall:
 
-![image](https://github.com/user-attachments/assets/50e31431-b05b-450d-acd2-5921f12d486f)
-
+![round3_overall](https://github.com/user-attachments/assets/89e9f4cd-30d5-4c35-985d-e243e5a9b52f)
 
 Round 4 Manual:
 Prompt:
@@ -246,7 +244,8 @@ To help you with your decision making, here's the distribution of player's choic
 
 
 
-![image](https://github.com/user-attachments/assets/acf0b7be-55ad-4018-b85f-307d8cc3895a)
+![round4_manual](https://github.com/user-attachments/assets/55a49bfa-9263-433f-be77-7c0684afcaec)
+
 
 Round 4 Manual Approach: Take a sample by surveying family and friends of which choice they would make depending on the prior percentages for shipping container problem from round 2 manual. I made my final decision depending on there choices. However, this was definitely not the most effective method as I believe most indiviudals did not account the prior percentage distributions to make their final choice.
 
@@ -281,11 +280,11 @@ Can you find this CSI and use it to trade better than ever and make your island 
 
 Round 4 Trading Approach: New Product MAGNIFICENT_MACAROONS. luxury product timing specific conditions like tariffs, transport fees, sunlight index, and sugar price as indicators for MACAROON price also needed to handle conversions of the luxury product. The most important conditions to time out were sunlight index, sugar price, and import/export tariffs. I ended up finding the Critical Sunlight Index to be 50, I am relatively confident in this value but I don't know if I found the most appropriate value for rebound timesteps when sunlight index returns back to or above CSI value and  drop timesteps for when below sunlight index falls below CSI. In short, I don't think I handled the lag appropriately for CSI which is why algorithm performed well on 100k timestep test submission but failed and was unstable on the 1M timestep actual submission. 
 
-![image](https://github.com/user-attachments/assets/18e3aa26-c24e-4b12-a7a6-b1ead5db83fa)
+![round4_algo](https://github.com/user-attachments/assets/03f90fde-bd61-4211-9729-d5a8c71079b2)
 
 Round 4 Overall:
 
-![image](https://github.com/user-attachments/assets/eaa8be6a-fbef-4d82-8f28-817a49047056)
+![round4_overall](https://github.com/user-attachments/assets/2d93e82f-02e6-43d4-9d61-0e0a493b6938)
 
 Round 5 Manual:
 Prompt:
@@ -295,7 +294,7 @@ Round 5 Manual Approach:
 
 Limited Participation due to familial and work obligations. I did not have time to reference old competition materials for this round of the competition and develop a strong foundation of a strategy for this round. I ended up creating a really bad submission for this manual round that ended up in PNL loss. I just read the provided news articles and created a quick judgment call based on what the article said. I was on the fence about the SHEDDIT (hay) and MOONSHINE articles and my guesses ended up being very wrong. I also did not account for how much the fee would influence the Profit for this round. The percentage you invest definitely matters and just trying to split the percentages equally among the products is not the correct approach. Also I used up all the investable amount provided (100%) I believe I should have used a lower percentage 70-80% for much higher returns as it would have incurrred less fees.  
 
-![image](https://github.com/user-attachments/assets/1635297d-35ee-4fb8-9926-2839e4a1eab0)
+![round5_manual](https://github.com/user-attachments/assets/859aec2f-63f0-4093-b43b-a28afb95ff02)
 
 Round 5 Trading:
 Prompt:
@@ -312,11 +311,11 @@ class OwnTrade:
 Round 5 Trading Approach:
 Limited Participation due to familial and work obligations. Submitted previous round algorithm did not account for the main component of this rounds algorithm challenge being the OwnTrade class/other competitor on archipelago.
 
-![image](https://github.com/user-attachments/assets/1c75b74f-30b8-4931-b09a-2e8f0ea0f83c)
+![round5_algo](https://github.com/user-attachments/assets/c8fea501-2a1d-450e-8d9a-a2366156af14)
 
 Round 5 Overall:
 
-![image](https://github.com/user-attachments/assets/6595e8b1-f2f5-4bc9-b304-0f2948359d32)
+![round5_overall](https://github.com/user-attachments/assets/90f225ed-b44c-4858-8626-88bc5ff1d2ad)
 
 
 ## Key Takeaways
